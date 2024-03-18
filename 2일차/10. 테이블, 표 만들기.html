@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그룹만들기</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse:collapse;
+    }
+  </style>
+</head>
+<body>
+  <!-- 블록요소: 요소들이 상자처럼 세로방향으로 쌓인다
+       div, hn.... -->
+  <div style="width: 100px; height: 200px; background-color:darkgoldenrod;">
+    <P>영화소개</P>
+    <P>영화소개하는 영역</P>
+  </div>
+  <!-- 인라인요소: 요소들이 가로방향으로 쌓인다
+       span, a, em, blockquote, q, sub/sup img.... -->
+  <div style="width: 200px; background-color:brown;">
+    <span>TV 프로그램 소개</span> 
+    <span>TV 프로그램 소개하는 영역</span>
+  </div>
+  <!--이미지 삽입--> 
+  <img src="image\cat.jpg" width="100px" height="100px" alt="고양이"> 
+  <img src="/2일차/image/천상.jpg" width="100px" height="100px" alt="천상">
+
+  <!-- 링크-->
+  <a href="https://www.naver.com">
+    <img src="/2일차/image/naver.png">
+  </a>
+  <a href="https://www.google.com" target="_blank">
+    <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+    <!--만약 이미지를 주소로 복사 후 붙여넣기 했지만 제대로 안나오면 "The W3C Markup validation Sevice 사이트에서 유효성 검사 -->
+  </a>
+
+  <!-- 목록 만들기 : 순서 없는 -->
+   <h1>판매중인 과일</h1>
+   <ul>
+      <li>바나나</li>
+      <li>사과</li>
+      <li>orange</li>
+   </ul>
+
+   <!-- 목록 만들기 : 순서 있는 -->
+    <h1>오늘의 할일</h1>
+    <ol>
+      <li>아침먹기</li>
+      <li>출근하기</li>
+      <li>점심먹기</li>
+      <li>퇴근하기</li>
+    </ol>
+    <!-- 정의형 목록 만들기 -->
+    <dl>
+      <dt>html</dt>
+      <dd>html은 하이퍼 텍스트 마크업 랭귀지의 약자로 <em>웹문서</em>의 구조를 설계하기 위한 목적으로 개발된 언어</dd>
+      <dt>CSS</dt>
+      <dd>CSS는 Cascading style sheet의 약자로 웹문서를 꾸미기 위한 목적으로 개발된 언어 </dd>
+    </dl>
+
+  <!-- 표 만들기 -->
+  <table style="width: 100%">
+    <caption>판매목록</caption>
+    <tr><th>번호</th><th>상품명</th><th>수량</th><th>가격</th><th>비고</th></tr>
+    <tr><td>1</td><td>콜라</td><td>100개</td><td>30,000원</td><td rowspan="3"></td></tr>
+    <tr><td>2</td><td>사이다</td><td>350개</td><td>62,500원</td></tr>
+    <tr><td>3</td><td>커피</td><td>1,000개</td><td>300,000원</td></tr>
+    <tr><td>합계급액</td><td colspan="4">392,500원</td>></tr>
+  </table>
+    
+</body>
+</html>

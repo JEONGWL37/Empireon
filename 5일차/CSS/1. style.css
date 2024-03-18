@@ -1,0 +1,84 @@
+/*h3 {
+  border: 1px solid gray;
+  background-color: blanchedalmond;
+   display: none; 
+}*/
+
+/*div {
+  width: 200px; /* display: inline 요소 적용 시 위드와 하이트 요소를 적용받지 못함* /
+  height: 200px; 
+  /* display: inline;  모든 요소가 한줄로 가로 방향으로 바꿔서 쌓이게 함, 블록에서 글씨 또는 글자요소로 변환시킨다* /
+}*/
+
+
+
+/*.box1 {
+  position:absolute
+  width: 200px; 
+  height: 200px;
+  background-color: orange;
+  overflow: hidden; /* 175p 참조, 박스 1 덱스트가 백그라운드에 넘치지 않게 히든 설정 * /
+}*/
+
+/*.box2 {
+  width: 300px; 
+  height: 300px;
+  background-color: aquamarine;
+  background-image : url("../image/cat.jpg"); /* ../는 상위폴더(5일 차)에서 이미지 폴더 찾아줌 * /
+  background-size: cover;
+  /* background-repeat: space; 교재 184p 참조, space는 이미지 반복하다가 일부 크기가 잘리는데 이를 보지 않고 싶다면 사용하면 됨* /
+  background-repeat: no-repeat;
+  /* background-position: center; * /
+  background-attachment:scroll;
+  background: red url("../image/cat.jpg") no-repeat center/100% 100% fixed;* /
+}*/
+/* background: 에서 제일 먼저 색상을 빨강으로 적용했지만 뒤에 이미지가 덮어서 쓰니 빨간색이 안보임*/
+
+/*span { /* 가로 세로 길이 적용하고 싶으면 디스플레이 넣고 block 넣으면 됨 * /
+  display: inline-block; /*인라인 요소에 상자요소를 넣겠다 = 글자이지만 div와 유사하다 참고* /
+  width: 100px; 
+  height: 100px;
+  /* background-color: rgba(255,0,0,0.3); a는 투명도 1에서 0에 가까울 수록 투명해짐* /
+  background-color: #ff0000; /* 16진수로 색상 설정 * /
+  margin: 20px  ; /* inline 상태에서는 위아래 마진 여백은 적용되지 않고 좌우에만 적용 됨 * /
+  opacity: 0.7; /*백그라운드 색상 투명도 조절 하는 기능 */ 
+
+  /*배치*/
+  body{
+    /* margin: 0; */
+  }
+
+.box {
+  width: 100px;
+  height: 100px;
+  }
+
+.red-box {
+  background-color: red;
+  /*position: relative;
+  z-index: 1;*/
+  float:left;
+}
+
+.green-box {
+  background-color: green;
+ /* position: absolute;
+  left: 0px;
+  top:  0px;*/  
+  float:left;
+}
+.blue-box {
+  background-color: blue;
+  /*position:fixed; /*부모 요소가 기준으로 함 * /
+  top:30px;
+  right:100px;*/
+  /*float:left; */
+  clear:left; 
+}
+
+/* float: none, left, right / 화면의 왼쪽에 놓을거나 오른쪽에 놓을거나 묻는 기능*/
+/* clear: left, right, both / 속성해제*/
+img {
+  float:right;
+  margin-left: 20px;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table, form 작성법</title>
+  <style>
+    tbody {
+      color: green;
+    }
+
+    thead {
+      background-color: rgb(178, 177, 179);
+    }
+
+    tfoot {
+      background-color: khaki;
+    }
+    
+    /*th{
+      color: red;
+    }
+
+    td {
+      color: red;
+    } 이런 경우에는 th, td 전부 빨간색이 되어 버려서 내가 의도한 표로 만들기 어려움
+      그래서 위와 같이 tbody, thead, tfoot 순으로 작성해서 예쁘게 꾸밀 수 있음
+    
+    tip: 윈도우 키 + 방향키로 화면 분할 가능. 하나는 비쥬얼 코드, 하나는 결과물 확인하면서 작업 가능*/
+
+  </style>
+<body>
+  
+  <!-- 테이블 -->
+  <table border="1">
+    <caption>정원 컴퍼니 매출표</caption>
+    <thead>
+      <tr>
+        <th>연차년도</th>
+        <th>품목</th>
+        <th>매출액</th>
+        <th>매출량</th>
+      </tr> 
+    </thead>
+    <tbody>
+      <tr>
+        <th>2002</th>
+        <td>전기밥솔</td>
+        <td>200,000,000</td>
+        <td>50,000</td>
+      </tr>
+      <tr>
+        <th>2003</th>
+        <td>컴퓨터</td>
+        <td>300,000,000</td>
+        <td>100,000</td>
+      </tr>
+      <tr>
+        <th>2004</th>
+        <td>냉장고</td>
+        <td>1,000,000</td>
+        <td>3,000</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>합계</th>
+        <td>비고</td>
+        <td>510,000,000</td>
+        <td>153,000</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- 양식: form -->
+  <form>
+    <fieldset>
+      <legend>반장</legend>
+      <label>이름</label> <!-- label은 화면에 표시하는게 주 목적이 아님, -->
+      <input type="text" autofocus><!-- autofocus: 새창으로 열기 또는 새로고침하면 바로 이름 란에 입력상태가 활성화 됨 -->
+      <br><br>
+      <label>나이</label>
+      <input type="number">
+    </fieldset> 
+
+     <fieldset disabled><!-- 필드 셋 영역을 비활성화 -->
+      <legend>부반장</legend>
+      <label>이름</label> <!-- 웹 접근성 향상에 도움을 주는 태그 
+      -->
+      <input type="text">
+      <br><br>
+ 
+
+      <label>나이</label>
+      <input type="number">
+    </fieldset>
+
+    <label>비밀번호</label>
+    <input type="password" 
+           placeholder="4자 이상 비번을 입력하시오"
+           maxlength="4" required><br> <!--최소 4자 이상 입력 시 minlaegth를, 최대로 제한하고 싶으면 maxlength 작성하면 됨 -->
+    <button type="submit">제출</button> <!-- 만약 타입을 서밋과 리셋까지만 적어도 이름이 자동으로 세팅되어 나옴, 
+                                             결과물에서는 서밋 = 제출,  리셋 = 초기화라고 자동으로 세팅 됨 -->
+    <input type="reset">취소</input><br><br> <!-- 버튼 대신에 인풋 단어 써도 됨 -->
+    <input type="search"><br> <!-- 검색용 텍스트 입력시 사용, 돋보기 모양의 아이콘이 나타남, 브라우저마다 다름 -->
+    <input type="tel" placeholder="010-####-####"><br> <!-- 전화번호 입력하는 용 -->
+    
+    <!-- type : 숫자를 입력 할 때-->
+    <label>number</label>
+    <input type="number" min="0" max="10"><br>
+    <label>range</label>
+    <input type="range" min="0" max="100" step="20"><br>
+
+    <label>달력</label>
+    <input type="date" min="2022-01-01" max="2024-12-31"><br>
+
+    <h1>체크 관련</h1>
+
+    <h3>checkbox</h3> <!-- 여러 개의 옵션 중에서 하나만 선택할 때 -->
+    <fieldset>
+      <legend>그래픽 종류</legend>
+      <input name="grephic" value="geforce" type="checkbox">지포스<br><!--name은 그룹화시켜 묶어주는 역할-->
+      <input name="grephic" value="radeon" type="checkbox">라데온<br><!-- value은 지정 또는 선택된 테이터를 넘겨주는 것을 역할 -->
+      <input name="grephic" value="intel" type="checkbox">인텔<br>
+    </fieldset>
+
+    <h3>radio</h3><!-- 둘 중에 하나여야 함 -->
+    <fieldset>
+      <legend>성별</legend>
+      <input type="radio" name="gender" value="male">남<br>
+      <input type="radio" name="gender" value="fmale">여<br> <!-- 성별을 둘 중에 하나만 체크 시 name="gender" 처럼 속성을 사용할 수 있다는 것까지 이런 옵션을 쓸 수 있음 -->
+      <!-- "<input type="radio">여<br>" 성별 같은거 생성할 때 잘못 된 방식-->
+    </fieldset>
+
+    <h3>기타</h3>
+    <label>파일</label>
+    <input type="file" accept="image/png, image/jpeg" multiple><br><br><!-- 하나가 아니라 여러개의 파일 선택하고 싶다면 multiple 삽입 -->
+    <label>이메일</label>
+    <input type="email"><br>
+    <input type="submit" title="서버에 제출"> <!-- 타이틀 입력 시 마우스를 올리면 툴팁에 내용이 출력 됨 -->
+    <input type="reset"><br><br>
+
+    <!-- 공통 속성
+      value, 
+      autofocus: 자동으로 어떤 요소가 먼저 선택하게 해주는 것, 
+      disabled: 비활성화,
+      required: 필수입력, 필수항목 표시할 때 사용 -->
+  </form>
+
+  <!-- 태그 종류에 상관없이 사용하는 전역/글로벌(전역=글로벌) 속성 -->
+  <table border="1">
+    <!-- col: 하나의 열을 그룹화 -->
+    <col style="width: 50x; background-color: aqua;">
+    <!-- colgroup: span과 함께 여러개를 그룹화 -->
+    <colgroup span="2" style="width: 150px; background-color:skyblue;"></colgroup>
+    <col style="width:  300px;">
+    <tr>
+      <th>번호</th><th>속성</th><th>값</th><th>설명</th>
+    </tr>
+    <tr>
+      <th>1</th><th>class</th><th>value</th><th>클래스값은 css에서 클래스 선택자로 사용, 이름 중복 가능</th>
+    </tr>
+    <tr>
+      <th>2</th><th>id</th><th>value</th><th>ID값은 CSS에서 ID 선택자로 사용, ID는 고유한 값</th>
+    </tr>
+    <tr>
+      <th>3</th><th>style</th><th>style</th><th>요소에 인라인 스타일을 지정</th>
+    </tr>
+    <tr>
+      <th>4</th><th>tile</th><th>text</th><th>요소에 추가정보를 지정, 마우스를 요소에 올리면 툴팁이 표시</th>
+    </tr>
+    <tr>
+      <th>5</th><th>lang</th><th>language code</th><th>요소에 사용한 텍스트의 언어 정보를 지정</th>
+    </tr>
+    <tr>
+      <th>6</th><th>hidden</th><th>hidden</th><th>요소를 화면에서 감추기, 숨기기</th>
+    </tr>
+    <tr>
+      <th>7</th><th>data-*</th><th>value</th><th>사용자가 임의의 속성을 만들 때, HTML5</th>
+    </tr>
+
+  </table>
+  <p lang="de">Guten Morgen</p><!-- 이것도 웹 접근성을 높이는 작업, 변화 없음-->
+
+
+
+  <!-- 구글> mdn 검색> HTML > <input> types에서 각 타입별 용도 확인 가능, 공식 표준같은 성격임(참고용) -->
+  <!-- 구글> codepen 검색 > 홈페이지 > 코딩 시작 버튼 클릭 > 간단하게 코트 테스트. 교재 79페이지에 확인 가능-->
+
+
+</body>
+</html>

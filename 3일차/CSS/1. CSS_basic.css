@@ -1,0 +1,86 @@
+
+/* /*전체 선택자*
+*{
+  color: red
+}
+
+/* 태그 선택자 *
+h3 {
+  background-color: bisque;
+}
+
+/* 클래스 선택자 */
+/* 링키 스타일
+.style-2 {
+  color:salmon;
+}
+
+#title {
+  background-color:greenyellow
+}*/
+
+/* 27번 기준으로 양단 */
+
+/* 일치 선택자 */
+/*span.intel{
+  color:blue
+}
+
+/* 자식 선택자 */
+
+/* ul 이 부모 li이 자식, ul 자식의 인텔만 선택하고 싶다. */
+/* ul > .intel{
+  color:lime;} */
+
+  /* ul 이 부모 li이 자식, ul 자식만 선택하고 싶다. * /
+  ul > li {
+    color:chocolate; 
+} */ 
+
+/*div > div{
+  color:teal;
+} */
+
+/* 하위선택자 : 공백 * /
+div span{
+  color:red;
+} */
+
+/* 인접 형제 선택자 : '+' * /
+.intel + li {
+  color:magenta;
+} */
+
+/* 일반 형제 선택자 : '+' * /
+.intel ~ li {
+  color:magenta; 
+}*/
+
+/* 가상 클래스 선택자 약 60개가 존재함 * /
+    - 링크 가상 클래스 :link :visited   */
+a:link {
+  color: orange;
+}
+a:visited {
+  color: goldenrod;
+}
+/*    동적 가상 클래스 :hover :activ */
+a:hover {
+  text-decoration: none;
+  background-color: gold;
+}
+button:active {
+  background-color:aqua;
+}
+
+/*    입력 요소 가상 클래스 :focus :checked : disabled :enabled */
+
+input:focus {
+  background-color: cornflowerblue;
+}
+input:disabled{
+  background-color:moccasin;
+}
+input:checked +label {
+  color:rgb(232, 25, 232);
+}

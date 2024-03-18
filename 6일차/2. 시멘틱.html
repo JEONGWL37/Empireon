@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 검색엔진이나 웹사이트가 어떤 언어 사용하는지 설정 -->
+<head>
+  <meta charset="UTF-8">
+  <!-- 문자 인코딩 방식: 인코딩(컴퓨터가 알 수 있도록 문자를 기계어로 변환해주는것) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 화면에 보여지고 있는 영역, 필수로 들어가야 함 -->
+  <!-- 오픈그래프, 파비콘 -->
+  <link rel="Stylesheet" href="./CSS/2. style.css"> <!--파비콘을 표시할 수 있는 영역을 링크로 삽입가능 -->
+  <title>시멘틱 태그:의미있는 태그</title>
+</head>
+<body>
+ <!-- 시멘틱 태그 장점: 웹 접근성, 검색엔진에 최적화(태그만 봐도 어떤 영역인지 알 수 있게 함), 유지보수 좋음, 가독성 향상.--> 
+<article class="card">
+   <aside class="card__thumb"> <!--부모의 일부분(언더바)-->
+   <figure class="card__image"></figure>
+   <div></div>
+  </aside>
+  <div class ="card__body">
+    <header class="card__title"></header>
+    <ul class="card__list">
+      <li class="card__list-item"></li>
+      <li class="card__list-item"></li>
+      <li class="card__list-item"></li>
+    </ul>
+  </div>
+</article>
+
+<article class="news">
+  <aside class="news__thumb"> <!--부모의 일부분(언더바)-->
+  <figure class="news__image"></figure>
+  <div></div>
+ </aside>
+ <div class ="news__body">
+   <header class="news__title"></header>
+   <ul class="news__list">
+     <li class="news__list-item"></li>
+     <li class="news__list-item"></li>
+     <li class="news__list-item"></li>
+   </ul>
+ </div>
+</article>
+</body>
+</html>

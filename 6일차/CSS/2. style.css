@@ -1,0 +1,90 @@
+article {
+  margin: 0px; /* 페이지 가운데 위치 */
+  padding: 10px;
+  width: 800px;
+  height: 400px;
+  background-color: greenyellow;
+}
+
+article aside {
+  padding: 10px;
+  width: 350px;
+  height: 380px;
+  background-color: chocolate;
+}
+
+article aside figure {
+  margin: 0px;
+  width: 350px;
+  height: 370px;
+  background-color: aqua;
+}
+
+article div {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  width: 350px;
+  height: 380px;
+  background-color: tomato;
+}
+
+article div header {
+  margin: 5px;
+  width: 340px;
+  height: 200px;
+  background-color: slategray;
+}
+
+article div ul {
+  background-color: sienna;
+}
+
+/* 클래스 명 */
+
+.card {
+  margin: 0px; /* 페이지 가운데 위치 */
+  padding: 10px;
+  width: 800px;
+  height: 400px;
+  background-color: greenyellow;
+}
+
+.thumb {
+  padding: 10px;
+  width: 350px;
+  height: 380px;
+  background-color: chocolate;
+}
+
+.image {
+  margin: 0px;
+  width: 350px;
+  height: 370px;
+  background-color: aqua;
+}
+
+.body {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  width: 350px;
+  height: 380px;
+  background-color: tomato;
+}
+
+.title {
+  margin: 5px;
+  width: 340px;
+  height: 200px;
+  background-color: slategray;
+}
+
+.list {
+  background-color: sienna;
+}
+
+.list-item {
+
+}
+
