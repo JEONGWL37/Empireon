@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠 조작</title>
+  <!-- <script defer src="./js/2.객체.js"></script>  -->
+  <!-- <style>
+    .active {
+      color:aliceblue;
+      font-size: 20px;
+      background-color: red;
+      font-weight: bold;
+    }
+    .red-color {
+      color: red;
+    }
+    .fz40{ 
+      font-size: 40px;
+    } -->
+  </style>
+</head>
+<body> <!--class="active" or class = "red-color fz40" -->
+  <button data-cnt="10">가방 구매</button>
+  <button data-cnt="0">신발 구매</button>
+  <!-- <p id ="title" class="fz40">Hello, <span style="display: none;">JavaScript!</span></p> -->
+  <!-- <p id ="textContent"></p>
+  <p id ="innerText"></p>
+  <p id ="innerHTML"></p> -->
+  <script>
+    const buttonEls = document.querySelectorAll("button");
+    buttonEls.forEach((el) => {
+      // console.log(el.dataset.cnt); // dataset: data-* 내가 정으한 속성에 대한 정보를 가져올 때 
+      el.dataset.cnt = 50; // 내가 작성한 속성의 값(data-cnt)을 변경할 때 
+    })
+
+    // const pEl = document.querySelector("#title");
+    // setInterval(function(){ //setInterval 윈도우에 실행되는 속성
+    //   pEl.classList.toggle("red-color"); // 반복실행
+    // })
+    // pEl.classList.add("red-color", "fz40"); // 클래스 또는 클래스 속성을 추가
+    // pEl.classList.remove("red-color"); // 클래스 또는 클래스 속성을 삭제
+    // pEl.style.color ="white";
+    // pEl.style.backgroundColor = "red";
+    // pEl.style.fontSize= "20px";
+    // document.querySelector("#textContent").textContent = '<strong>textContent</strong>';
+    // document.querySelector("#innerText").innerText = '<strong>innerText</strong>';
+    // document.querySelector("#innerHTML").innerHTML = '<strong>innerHTML</strong>';
+    // document.getElementById("title").textContent; // Hellow, JavaScript! 
+    // document.getElementById("title").innerText; // Hellow, 
+    // document.getElementById("title").innerHTML; // Hello, <span style="display: none;">JavaScript!</span></p>
+
+    // console.log(document.getElementById("title").textContent);
+    // console.log(document.getElementById("title").innerText);
+    // console.log(document.getElementById("title").innerHTML);
+  </script>
+</body>
+</html>
