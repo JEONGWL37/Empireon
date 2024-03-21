@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경색 바꾸기</title>
+  <link rel="stylesheet" href="./css.css">
+  <!-- <script src defer -->
+</head>
+<body>
+  <ul>
+    <li class="Gre"><a href="#" onclick="change1('green')">Green</a></li> 
+    <li class="Ore"><a href="#" onclick="change1('orange')">Orange</a></li>
+    <li class="Pup"><a href="#" onclick="change1('purple')">Purple</a></li> 
+  <ul>  
+  <div> </div>
+  <script>
+    function change1(color){
+      const result = document.querySelector("div");
+      result.style.backgroundColor = color;
+    }
+  </script>  
+</body>
+</html>

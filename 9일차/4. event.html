@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>이벤트, 이벤트 객체</title>  <!-- 이벤트도 객체로 처리됨 -->
+</head>
+<body>
+  <!-- 이벤트 등록 -->
+  <!--  1. 인라인 방식
+      <button onclick="clickEvent()">클릭</button>
+       <script>
+        function clickEvent(){
+          alert("click");
+        }
+      </script> -->
+
+    <!-- 2. 프로퍼티 리스너 -->
+    <!-- <button>클릭</button>
+    <script>
+      const btnEl = document.querySelector("button");
+      btnEl.onclick = function(){
+        alert("프로퍼티 리스너 표현식");
+      }
+      btnEl.onclick = () => { // 화살표 함수
+        alert("프로퍼티 리스너 화살표 함수");
+      }
+      btnEl.onclick = clickEvent;
+      function clickEvent(){
+        alert("프로퍼티 리스너 선언");
+      }
+    </script> -->
+    
+    <!-- 3. 이벤트 등록 메서드로 이벤트 등록 -->
+    <!--  <노드>.addEventListenner("이벤트 타입", 이벤트 함수) -->
+
+    <!-- <button>클릭</button>
+    <script>
+      const btnEl = document.querySelector("button");
+      btnEl.addEventListener("click", function(){
+        alert("addEventListener 등록");
+      })
+    </script> -->
+
+    <!-- 이벤트 객체와 this -->
+    <button>클릭</button>
+  <a href="https://www.naver.com">네이버 이동</a>
+  <a href="https://www.daum.net">네이버 이동</a>
+
+  <p>text-1</p>
+  <p>text-2</p>
+  <p>text-3</p>
+  
+  <script>
+    const pEls= document.querySelectorAll("p");
+    pEls.forEach((el) => { 
+      el.addEventListener("click", (e) => {
+        console.log(this); // 클릭한 지점에 창을 가지고 옴 즉 window 속성 전체를 가져옴.
+        console.log(e.target); // 이벤트가 발생한 노드를 가져옴
+      })
+    })
+    //   el.addEventListener("click", function(){
+    //     console.log(this);
+    //     if(this.style.color === 'red') {
+    //       this.style.color = 'black'
+    //     } else { 
+    //     this.style.color = 'red';
+    //     }
+    //     // console.log(this);
+    //   })
+    // })
+
+
+      const btnEl =document.querySelector("button");
+      btnEl.addEventListener("mouseover",function(event){ //이벤트 객체
+        console.log(event);
+      })
+
+      const aEls= document.querySelectorAll("a");
+      for(let i = 0 ; i <aEls.length; i++){
+        aEls[i].addEventListener("click", function(e){
+          //기본 이벤트 취소
+          e.preventDefault();
+        })
+      }
+    </script>
+    
+</body>
+</html>

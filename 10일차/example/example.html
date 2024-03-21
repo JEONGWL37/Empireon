@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에디오피아 게뎁</title>
+  <link rel="stylesheet" href="./example.css">
+</head>
+<body>
+  <div id = "container">
+      <h1>에디오피아 게뎁</h1>
+      <div id="prod-pic">
+        <img id ="main" src="./image/coffee-pink.jpg" width="200" height="200">
+        <div id="small-pic">
+            <img class="small" src="./image/coffee-pink.jpg">
+            <img class="small" src="./image/coffee-blue.jpg">
+            <img class="small" src="./image/coffee-gray.jpg">
+        </div>
+      </div>
+
+      <div id = "desc">
+       <ul>
+         <li>상품명: 에디오피아 게뎁</li>
+         <li class="bluetext">판매가: 9,000원</li>
+         <li>배송비: 3,000원<br>(50,000원 이상 구매 시 무료)</li>
+         <li>적립금: 180원(2%)</li>
+         <li>로스팅: 2024.03.21</li>
+         <button> 장바구니 담기</button>
+      </ul>  
+        <a href="#">상세 설명 보기 </a>
+      </div>
+  </div>
+  <script>
+    const cup = document.querySelector("#main");
+    const smallPic = document.querySelectorAll(".small");
+    for(let i =0; i <smallPic.length; i++){
+      smallPic[i].addEventListener("click", changePic);
+    }
+    function changePic(){
+      const newPic = this.src;
+      cup.setAttribute("src", newPic);
+    }
+  </script>
+</body>
+</html>

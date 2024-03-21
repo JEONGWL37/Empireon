@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 제어하기</title>
+</head>
+<body>
+  <form>
+    <label><input type="checkbox" value="apple">사과</label>
+    <label><input type="checkbox" value="banana">바나나</label>
+    <label><input type="checkbox" value="grape">포도</label>
+    <label><input type="checkbox" value="orange">오렌지</label>
+  </form>
+  <button type="submit" onclick="checkboxShow()">전송</button>
+
+  <script>
+    const checkboxEls = document.querySelectorAll("[type='checkbox']");
+    for(let i=0;i < checkboxEls.length;i++){
+        if(checkboxEls[i].checked === true){
+            console.log(checkboxEls[i].value+ "<br>");
+        }
+    } 
+  </script>
+  <!-- <form name="form1">
+    <label for="userid">ID</label>
+    <input type="text" id="userid" name="userid">
+    <label for="age">나이</label>
+    <input type="text" id="age" name="age">
+    <label for="gender">성별</label>
+    <select id ="gender" name="gender">
+      <option value="male">남자</option>
+      <option value="female">여자</option>
+    </select>
+    <button type="submit">전송</button>
+  </form> -->
+  <!-- <form name="form2">
+    <input type="text" id="username" name="username">
+  </form>
+  <form name="form3">
+    <input type="text" id="usernick" name="usernick">
+  </form> 
+  <script>
+    console.log(document.form1);
+  </script>-->
+</body>
+</html>
+
+
+<!-- const checkboxEls = document.querySelectorAll("[type='checkbox']");
+    for(let i=0;i < checkboxEls.length;i++){
+        if(checkboxEls[i].checked=== true){
+            console.log(checkboxEls[i].value);
+        }
+    }  -->
